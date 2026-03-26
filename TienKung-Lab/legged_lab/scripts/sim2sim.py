@@ -1,3 +1,7 @@
+import sys, os
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, ROOT_DIR)
+sys.path.insert(0, os.path.join(ROOT_DIR, "rsl_rl"))
 # Copyright (c) 2021-2024, The RSL-RL Project Developers.
 # All rights reserved.
 # Original code is licensed under the BSD-3-Clause license.

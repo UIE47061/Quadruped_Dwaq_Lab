@@ -128,8 +128,8 @@ class BigRedDogDwaqEnv(VecEnv):
             self.lidar: RayCaster = self.scene.sensors["lidar"]
 
         # Instantiate Depth Camera if enabled
-        if self.cfg.scene.depth_camera.enable_depth_camera:
-            self.depth_camera: TiledCamera = self.scene.sensors["depth_camera"]
+        # if self.cfg.scene.depth_camera.enable_depth_camera:
+        #     self.depth_camera: TiledCamera = self.scene.sensors["depth_camera"]
 
         # # Instantiate RGB Camera if enabled
         # if hasattr(self.cfg.scene, "rgb_camera") and self.cfg.scene.rgb_camera.enable_rgb_camera:

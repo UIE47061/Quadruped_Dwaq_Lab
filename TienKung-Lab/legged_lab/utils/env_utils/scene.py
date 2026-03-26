@@ -95,28 +95,28 @@ class SceneCfg(InteractiveSceneCfg):
                 drift_range=config.height_scanner.drift_range,
             )
 
-        if config.lidar.enable_lidar:
-            self.lidar = RayCasterCfg(
-                prim_path="{ENV_REGEX_NS}/Robot/" + config.lidar.prim_body_name,
-                offset=RayCasterCfg.OffsetCfg(pos=config.lidar.offset, rot=config.lidar.rotation),
-                ray_alignment="yaw",
-                pattern_cfg=config.lidar.pattern_cfg,
-                debug_vis=config.lidar.debug_vis,
-                mesh_prim_paths=config.lidar.mesh_prim_paths,
-                max_distance=config.lidar.max_distance,
-            )
+        # if config.lidar.enable_lidar:
+        #     self.lidar = RayCasterCfg(
+        #         prim_path="{ENV_REGEX_NS}/Robot/" + config.lidar.prim_body_name,
+        #         offset=RayCasterCfg.OffsetCfg(pos=config.lidar.offset, rot=config.lidar.rotation),
+        #         ray_alignment="yaw",
+        #         pattern_cfg=config.lidar.pattern_cfg,
+        #         debug_vis=config.lidar.debug_vis,
+        #         mesh_prim_paths=config.lidar.mesh_prim_paths,
+        #         max_distance=config.lidar.max_distance,
+        #     )
 
-        if config.depth_camera.enable_depth_camera:
-            self.depth_camera = TiledCameraCfg(
-                prim_path="{ENV_REGEX_NS}/Robot/" + config.depth_camera.prim_body_name,
-                offset=config.depth_camera.offset,
-                height=config.depth_camera.height,
-                width=config.depth_camera.width,
-                data_types=config.depth_camera.data_types,
-                spawn=config.depth_camera.spawn,
-                debug_vis=config.depth_camera.debug_vis,
-                visualizer_cfg=config.depth_camera.visualizer_cfg,
-            )
+        # if config.depth_camera.enable_depth_camera:
+        #     self.depth_camera = TiledCameraCfg(
+        #         prim_path="{ENV_REGEX_NS}/Robot/" + config.depth_camera.prim_body_name,
+        #         offset=config.depth_camera.offset,
+        #         height=config.depth_camera.height,
+        #         width=config.depth_camera.width,
+        #         data_types=config.depth_camera.data_types,
+        #         spawn=config.depth_camera.spawn,
+        #         debug_vis=config.depth_camera.debug_vis,
+        #         visualizer_cfg=config.depth_camera.visualizer_cfg,
+        #     )
         if hasattr(config, "rgb_camera") and config.rgb_camera.enable_rgb_camera:
             # Place camera prim as a child of the body prim to avoid spawning at the same prim path
             # update_period: calculated from update_interval_steps (number of simulation steps)

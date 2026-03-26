@@ -68,9 +68,9 @@ class BaseSceneCfg:
     max_init_terrain_level: int = 5
     height_scanner: HeightScannerCfg = HeightScannerCfg()
     privileged_info: PrivilegedInfoCfg = PrivilegedInfoCfg()  # Privileged info for Critic
-    lidar: LidarCfg = LidarCfg()
-    depth_camera: TiledCameraCfg = TiledCameraCfg()
-    rgb_camera: RgbCameraCfg = RgbCameraCfg()
+    # lidar: LidarCfg = LidarCfg()
+    # depth_camera: TiledCameraCfg = TiledCameraCfg()
+    # rgb_camera: RgbCameraCfg = RgbCameraCfg()
 
 
 
